@@ -1,7 +1,6 @@
 # check permissions
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
+if [ `id -u` = 0 ] ; then
+        echo "Script needs to be run as sudo or root"
 fi
 
 # get full path
@@ -13,7 +12,7 @@ rm /usr/lib/firmware/intel/sof/ -rf || true
 rm /usr/lib/firmware/intel/sof-tplg/ -rf || true
 
 # add new intel sof firmware files
-cp "$SCRIPTPATH/data/intel/*" /usr/lib/firmware/intel/ -r
+cp "$SCRIPTPATH/data/intel/"* /usr/lib/firmware/intel/ -r
 
 # remove existing alsa ucm2 files
 rm /usr/share/alsa/ucm2/sof-soundwire -rf || true
