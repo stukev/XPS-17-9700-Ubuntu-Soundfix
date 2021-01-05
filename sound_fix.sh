@@ -1,6 +1,10 @@
-# check permissions
-if [ `id -u` = 0 ] ; then
+#!/bin/bash
+
+# check write permission
+FOLDER="/usr/lib/firmware/intel/"
+if ! [ -w $FOLDER ]; then
         echo "Script needs to be run as sudo or root"
+        exit
 fi
 
 # get full path
