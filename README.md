@@ -4,12 +4,15 @@ A simple script to install the necessary firmware to fix sound output (dummy sou
 ## General info
 All necessary files are included in this git repo. I've opted for this because some of the tutorials for this fix link to packages which 404 as they've been updated since.
 
-You will also need a kernel that supports the new firmware. I opted for linux-oem-20.04 since that's a known one to include some Dell fixes. Currently 5.6.0-1056-oem is the one that works best, so I suggest you use that one.
+You will also need a kernel that supports the new firmware. I opted for linux-oem-20.04 since that's a known one to include some Dell fixes. Currently 5.6.0-1056-oem is the only one with both Sound and Microphone working. Please open an issue if you find a newer one that works.
 
 ## Tested Kernels
-- 5.6.0-1056-oem No issues
-- 5.10.0-1029-oem Sound works but [has microphone issues](https://github.com/stukev/XPS-17-9700-Ubuntu-Soundfix/issues/3)
-- 5.11.0-19 Should have no issues [according to Launchpad](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1912673/comments/24)
+| Kernel | Sound | Microphone |
+| ------ | ----- | ---------- |
+| 5.6.0-1056-oem | Works | Works |
+| 5.10.0-1029-oem | Works | [Broken](https://github.com/stukev/XPS-17-9700-Ubuntu-Soundfix/issues/3) |
+| 5.10.0-1033-oem | Works | [Broken](https://github.com/stukev/XPS-17-9700-Ubuntu-Soundfix/issues/3) |
+| 5.10.0-1034-oem | Works | [Broken](https://github.com/stukev/XPS-17-9700-Ubuntu-Soundfix/issues/3) |
 
 ## Setup
 1. Install the necessary kernel with `sudo apt install linux-oem-20.04`
