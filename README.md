@@ -13,6 +13,7 @@ You will also need a kernel that supports the new firmware. I opted for linux-oe
 | 5.10.0-1029-oem | Works | [Broken](https://github.com/stukev/XPS-17-9700-Ubuntu-Soundfix/issues/3) |
 | 5.10.0-1033-oem | Works | [Broken](https://github.com/stukev/XPS-17-9700-Ubuntu-Soundfix/issues/3) |
 | 5.10.0-1034-oem | Works | [Broken](https://github.com/stukev/XPS-17-9700-Ubuntu-Soundfix/issues/3) |
+| 5.10.0-1045-oem | Works | Unknown |
 
 ## Setup
 1. Install the necessary kernel with `sudo apt install linux-oem-20.04`
